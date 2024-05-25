@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Scoped Styles With Shadow Dom</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <template shadowrootmode="open">
+        <span> I should be green. </span>
+        <span> Me too. </span>
+        <style>
+          span {
+            color: green;
+          }
+        </style>
+      </template>
+    </div>
+
+    <div>
+      <template shadowrootmode="open">
+        <span> i should be white. </span>
+      </template>
+    </div>
+
+    <div>
+      <template shadowrootmode="open">
+        <span> I should be red. </span>
+        <style>
+          span {
+            color: red;
+          }
+        </style>
+      </template>
+    </div>
+
+    <main id="main"></main>
+  </body>
+</html>
