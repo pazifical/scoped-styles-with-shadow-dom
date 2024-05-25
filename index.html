@@ -15,6 +15,7 @@
   </head>
 
   <body>
+    <!-- This block could be a server side rendered component -->
     <div>
       <template shadowrootmode="open">
         <span> I should be green. </span>
@@ -26,13 +27,17 @@
         </style>
       </template>
     </div>
+    <!-- End of block -->
 
+    <!-- This block as well -->
     <div>
       <template shadowrootmode="open">
         <span> i should be white. </span>
       </template>
     </div>
+    <!-- End of block -->
 
+    <!-- And this one too -->
     <div>
       <template shadowrootmode="open">
         <span> I should be red. </span>
@@ -43,7 +48,6 @@
         </style>
       </template>
     </div>
-
-    <main id="main"></main>
+    <!-- End of block -->
   </body>
 </html>
